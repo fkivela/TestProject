@@ -1,4 +1,7 @@
-x = linspace(1,10,100);
-y = x.^2;
+x = linspace(-10,10,100);
+y = x;
 
-plot(x, y);
+[X, Y] = meshgrid(x, y);
+z = X.^2 + Y.^2;
+
+surf(x, y, z);
